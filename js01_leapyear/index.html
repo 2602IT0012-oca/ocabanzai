@@ -27,12 +27,25 @@
         const calc_leap = (year) => {
             // 数値に変換して判定
             const yNum = Number(year);
-            if (yNum == 2000) {
-                return true;
+            if (yNum % 4 ===0){
+                if (yNum % 100 ===0){
+                    if (yNum % 400 ===0) {
+                        // console.log(`西暦${yNum}年はうるう年です`);
+                        return true;
+                    } else {
+                        // console.log(`西暦${yNum}年はうるう年ではありません`);
+                        return false;
+                    }
+                }else {
+                    // console.log(`西暦${yNum}年はうるう年です`);
+                    return true;
+                }
             } else {
+                // console.log(`西暦${yNum}年はうるう年ではありません`)
                 return false;
             }
         }
+            
      </script>
 </body>
 </html>
